@@ -17,11 +17,11 @@ PRIMARY KEY (id)
 -- 3. Se ingresan los 3 post, dos para Pamela y uno para Carlos con el comando INSERT
 -- INTO nombre_tabla () VALUES();
 INSERT INTO post (usuario, fecha_creacion, contenido, descripcion)
-VALUES ('Pamela','07-13-2019' ,'Revisaremos el contenido que se verá en este curso, comenzando por ..','Introducción a las bases de datos');
+VALUES ('Pamela','07-13-2022' ,'Revisaremos el contenido que se verá en este curso, comenzando por ..','Introducción a las bases de datos');
 INSERT INTO post (usuario, fecha_creacion, contenido, descripcion)
-VALUES ('Pamela','07-14-2019' ,'En esta oportunidad, empezaremos con la creación ....','Creando una tabla');
+VALUES ('Pamela','07-14-2022' ,'En esta oportunidad, empezaremos con la creación ....','Creando una tabla');
 INSERT INTO post (usuario, fecha_creacion, contenido, descripcion)
-VALUES ('Carlos','07-15-2019' ,'En latinoamérica hay un déficit de programadores ....','Empezando a programar');
+VALUES ('Carlos','07-15-2022' ,'En latinoamérica hay un déficit de programadores ....','Empezando a programar');
 
 -- 4. Se modifica la tabla agregando la columna título.
 ALTER TABLE post ADD titulo VARCHAR(20);
@@ -31,14 +31,14 @@ UPDATE post SET titulo ='Unidad 2' WHERE id = 2;
 UPDATE post SET titulo ='Programación?' WHERE id = 3;
 -- 6. Se ingresan 2 post más, ahora se debe incluir el título.
 INSERT INTO post (usuario, fecha_creacion, contenido, descripcion,titulo)
-VALUES ('Pedro','07-14-2019' ,'Los pasos para armar ...','Tips al momento de armar el curriculum ', 'Armando curriculum');
+VALUES ('Pedro','07-14-2022' ,'Los pasos para armar ...','Tips al momento de armar el curriculum ', 'Armando curriculum');
 INSERT INTO post (usuario, fecha_creacion, contenido, descripcion,titulo)
-VALUES ('Pedro','07-14-2019' ,'Hoy en día, ...','Problemas al momento de buscar trabajo', 'Mi primer trabajo');
+VALUES ('Pedro','07-14-2022' ,'Hoy en día, ...','Problemas al momento de buscar trabajo', 'Mi primer trabajo');
 
 -- 7. Eliminar los post de Carlos.
 DELETE FROM post WHERE usuario='Carlos';
 -- 8. Ingresar un nuevo post para el usuario "Carlos".
-INSERT INTO post (usuario, fecha_creacion, contenido, descripcion, titulo) VALUES ('Carlos','07-14-2019' ,'En esta nueva unidad...','Alterando una tabla', 'ALTER TABLE');
+INSERT INTO post (usuario, fecha_creacion, contenido, descripcion, titulo) VALUES ('Carlos','07-14-2022' ,'En esta nueva unidad...','Alterando una tabla', 'ALTER TABLE');
 
 -- :::::::::::::: PARTE 2 :::::::::::::::::::: -------------------
 
@@ -53,19 +53,19 @@ FOREIGN KEY (id_post) REFERENCES post (id)
 
 
 -- 2. Crear 2 comentarios para los post de "Pamela" y 4 para "Carlos".
-INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (6,'07-19-2019 15:16:19', 'Muy buen contenido!');
-INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (6,'07-19-2019 16:16:19', 'Gracias');
-INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (3,'07-19-2019 12:19:49', 'exelente');
-INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (3,'07-20-2019 16:20:15', 'maravilloso');
-INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (3,'07-21-2019 17:40:12', 'me perdí en el 3er punto');
-INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (3,'07-21-2019 19:26:56', 'gracias!');
+INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (6,'07-19-2022 15:16:19', 'Muy buen contenido!');
+INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (6,'07-19-2022 16:16:19', 'Gracias');
+INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (3,'07-19-2022 12:19:49', 'exelente');
+INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (3,'07-20-2022 16:20:15', 'maravilloso');
+INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (3,'07-21-2022 17:40:12', 'me perdí en el 3er punto');
+INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (3,'07-21-2022 19:26:56', 'gracias!');
 
 -- 3. Crear nuevo post de Margarita.
 INSERT INTO post (usuario, fecha_creacion, contenido, descripcion,
-titulo) VALUES ('Margarita','07-23-2019' ,'para comenzar ...','Taller debases de datos', 'SQL');
+titulo) VALUES ('Margarita','07-23-2022' ,'para comenzar ...','Taller debases de datos', 'SQL');
 -- 4. Insertar 5 comentarios para Margarita.
-INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (7,'07-22-2019 13:26:56', 'gracias!');
-INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (7,'07-22-2019 14:38:12', 'gracias!');
-INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (7,'07-22-2019 15:26:56', 'muchas gracias por tu aporte');
-INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (7,'07-23-2019 13:42:42', 'Entendí todo');
-INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (7,'07-24-2019 03:15:34', 'gracias!');
+INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (7,'07-22-2022 13:26:56', 'gracias!');
+INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (7,'07-22-2022 14:38:12', 'gracias!');
+INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (7,'07-22-2022 15:26:56', 'muchas gracias por tu aporte');
+INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (7,'07-23-2022 13:42:42', 'Entendí todo');
+INSERT INTO comentario (id_post, fecha_creacion, contenido) VALUES (7,'07-24-2022 03:15:34', 'gracias!');
